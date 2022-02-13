@@ -39,11 +39,18 @@ body {
 }
 .header {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
     width: 100%;
-    padding: 115px 0;
-    gap: 95px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+@media (max-width: 978px) {
+    .header {
+        align-items: center;
+        flex-direction: column;
+        padding-top: 110px;
+        padding-bottom: 110px;
+    }
 }
 .header__logo {
     width: 105px;
@@ -54,6 +61,13 @@ body {
     font-style: normal;
     font-size: 40px;
     line-height: 26px;
+    order: 2;
+}
+@media (max-width: 978px) {
+    .header__logo {
+        order: 1;
+        padding-bottom: 90px;
+    }
 }
 .header__logo-violets {
     color: #423853;
@@ -70,25 +84,64 @@ body {
     border-radius: 8px;
     margin-left: auto;
 }
-.header__menu {
+
+.header__menu-left {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     font-size: 14px;
-    gap: 30px;
+    width: 470px;
+    gap: 35px;
+    height: 55px;
+    border-bottom: 1px solid #c4c4c4;
+    margin-right: 60px;
+    order: 1;
 }
-.header__menu-item {
+@media (max-width: 978px) {
+    .header__menu-left {
+        border: 0;
+        margin: 0;
+        gap: 0;
+        width: auto;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        margin-bottom: 30px;
+    }
+}
+.header__menu-link a {
     color: #383838;
     font-weight: 500;
 }
-.header__menu-item:hover {
+.header__menu-link a:hover {
     color: #b1be85;
     text-decoration: underline;
     text-decoration-thickness: 2px;
     text-underline-offset: 1px;
     text-decoration-color: #b1be85;
     transition: all .3s ease-out;
+}
+.header__menu-right {
+    display: flex;
+    font-size: 14px;
+    width: 470px;
+    gap: 35px;
+    height: 55px;
+    justify-content: flex-end;
+    border-bottom: 1px solid #c4c4c4;
+    margin-left: 60px;
+    order: 3;
+}
+@media (max-width: 978px) {
+    .header__menu-right {
+        border: 0;
+        margin: 0;
+        gap: 0;
+        width: auto;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
 }
 .header__hero {
     display: flex;
