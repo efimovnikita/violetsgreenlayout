@@ -219,6 +219,8 @@ body {
 
 /* Main */
 .main {
+    display: grid;
+    row-gap: 100px;
     padding-top: 45px;
 }
 .violets {
@@ -330,4 +332,9 @@ body {
     .violets__others {
         grid-template-columns: repeat(1, auto);
     }
+}
+.title {
+    font-weight: 500;
+    font-size: 30px;
+    padding-bottom: 70px;
 }
