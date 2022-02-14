@@ -370,3 +370,55 @@ body {
     font-weight: 300;
     line-height: 31px;
 }
+.how-order {
+    display: grid;
+    grid-template-columns: 560px 560px;
+    justify-content: center;
+    column-gap: 40px;
+}
+@media (max-width: 1190px) {
+    .how-order {
+        row-gap: 35px;
+        grid-template-columns: 560px;
+    }
+}
+.how-order__img {
+    width: 560px;
+}
+.how-order__content {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+.how-order__title {
+    font-size: 46px;
+    font-weight: 500;
+}
+.how-order__subtitle {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 31px;
+}
+.how-order__text {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 28px;
+}
+.how-order__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    background-color: #473f69;
+    height: 60px;
+    width: 220px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.how-order__button:hover {
+    color: black;
+    background-color: #a6c66c;
+}
